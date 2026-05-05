@@ -430,10 +430,10 @@ export default {
       }
     },
     power_limit_mgmt: {
-      headline: 'Leistungbegrenzung',
+      headline: 'Leistungsbegrenzung',
       hardware_settings: {
-        headline: 'Leistungbegrenzung Einstellungen',
-        enable_btn_label: 'Leistungbegrenzung aktivieren',
+        headline: 'Leistungsbegrenzung Einstellungen',
+        enable_btn_label: 'Leistungsbegrenzung aktivieren',
         power_limit_label: 'Maximale Leistung (in mW)',
         save_btn_label: 'Speichern',
         save_and_return_btn_label: 'Speichern & Zurück',
@@ -561,7 +561,7 @@ export default {
         tube_capacity_label: 'Schlauchkapazität (in ml)',
         tube_capacity_desc: 'Die Schlauchkapazität bestimmt, wie viel Flüssigkeit benötigt wird, um den Schlauch, der den Flüssigkeitsbehälter mit dem Ausgabeteil Ihrer Cocktailmaschine verbindet, zu füllen. Diese Metrik wird verwendet, um die Schläuche mit Flüssigkeit zu füllen, bevor tatsächlich ein neuer Drink hergestellt wird. Sie wird auch verwendet, um die Schläuche zu entleeren (die Flüssigkeit zurück in den Behälter zu pumpen), wenn die Maschine längere Zeit nicht benutzt wurde.',
         power_consumption_label: 'Stromverbrauch (in mW)',
-        power_consumption_desc: 'Wie viel Leistung benötigt diese Pumpe? CocktailPi lässt, nur so viele Pumpen gleichzeitig laufen, wie das Netzteil gleichzeitig versorgen kann. Dieser Parameter has nur dann einen Effekt, wenn das \'Leistungsbegrenzungs\'-Feature aktiviert wurde!',
+        power_consumption_desc: 'Wie viel Leistung benötigt diese Pumpe? CocktailPi lässt, nur so viele Pumpen gleichzeitig laufen, wie das Netzteil gleichzeitig versorgen kann. Dieser Parameter hat nur dann einen Effekt, wenn das \'Leistungsbegrenzungs\'-Feature aktiviert wurde!',
         power_consumption_link_text: 'Leistungsbegrenzung einstellen',
         motor_tester: {
           headline: 'Motortester',
@@ -586,7 +586,7 @@ export default {
         handle: 'Status',
         headline: 'Pumpenstatus',
         pumped_up_label: 'Angepumpt',
-        pumped_up_desc: "Das Feld 'Angepumpt' zeigt ob der Schlauch, der zu der Pumpe gehört mit Flüssigkeit gefüllt ist. Wenn die Schläuche nicht mit Flüssigkeit gefüllt sind, füllt die Maschine sie, bevor ein Cocktail hergestellt wird. Dieses Feld wird auch verwendet, um festzustellen, aus welchen Pumpen die Flüssigkeit in den Behälter zurückgepumpt werden soll, wenn die Maschine eine bestimmte Zeit nicht benutzt wurde.",
+        pumped_up_desc: "Das Feld 'Angepumpt' zeigt, ob der Schlauch, der zu der Pumpe gehört mit Flüssigkeit gefüllt ist. Wenn die Schläuche nicht mit Flüssigkeit gefüllt sind, füllt die Maschine sie, bevor ein Cocktail hergestellt wird. Dieses Feld wird auch verwendet, um festzustellen, aus welchen Pumpen die Flüssigkeit in den Behälter zurückgepumpt werden soll, wenn die Maschine eine bestimmte Zeit nicht benutzt wurde.",
         filling_level_label: 'Aktueller Füllstand',
         filling_level_desc: 'Der aktuelle Füllstand des Behälters, der an die Pumpe angeschlossen ist. Dieses Feld wird verwendet, um zu überprüfen, ob noch genügend Flüssigkeit vorhanden ist, um einen Cocktail in einer bestimmten Größe herzustellen.',
         ingredient_label: 'Aktuelle Zutat',
@@ -825,7 +825,7 @@ export default {
         match_glass_no: 'Nein'
       },
       power_limit: {
-        headline: 'Leistungbegrenzung',
+        headline: 'Leistungsbegrenzung',
         status: 'Status:',
         status_enabled: 'Aktiviert',
         status_disabled: 'Deaktiviert',
@@ -853,7 +853,7 @@ export default {
     make_cocktail_customizer: {
       headline: 'Bestellanpassung',
       headline_boosting: 'Boosting:',
-      boosting_desc: 'Erhöht (oder verringert) die Menge der im Rezept als boostbar ausgewiesenen Zutaten. (Normalerweise Spirituosen) Nicht boostbare Zutaten werden hernunter- oder hochskaliert. Die Menge der abgegebenen Flüssigkeit bleibt gleich!',
+      boosting_desc: 'Erhöht (oder verringert) die Menge der im Rezept als boostbar ausgewiesenen Zutaten (Normalerweise Spirituosen). Nicht boostbare Zutaten werden herunter- oder hochskaliert. Die Menge der abgegebenen Flüssigkeit bleibt gleich!',
       headline_additional_ingredients: 'Zusätzliche Zutaten:',
       additional_ingredients_desc: 'Diese Zutaten werden als weiterer Produktionsschritt hinzugefügt. Die abgegebene Flüssigkeitsmenge wird um die Menge der bestellten zusätzlichen Zutaten erhöht.',
       add_new_ingredient_btn_label: 'Neue Zutat hinzufügen',
@@ -984,7 +984,7 @@ export default {
     gpio_expander_expansion_item: {
       caption_local: 'Board: Lokal, Nutzung: {pinsUsed}/{pinsMax}',
       caption_i2c: 'Adresse: {addr}, Board: {board}, Nutzung: {pinsUsed}/{pinsMax}',
-      i2c_backend_restarted: 'I2C backend neu gestarted'
+      i2c_backend_restarted: 'I2C backend neu gestartet'
     },
     pump_mgmt: {
       headline: 'Pumpenverwaltung',
@@ -1085,7 +1085,7 @@ export default {
     },
     pump_setup_dc_hw_pins: {
       control_pin_label: 'Steuerungs-Pin',
-      control_pin_desc: "Ein Gleichstrommotor kann ein- und ausgeschaltet werden, indem er mit einer Stromquelle verbunden und von dieser getrennt wird. Dies geschieht in der Regel mit Hilfe eines Relais. Das Relais öffnet und schließt den elektronischen Stromkreis, mit dem der Motor verbunden ist. Das Feld 'Steuerungs-Pin' konfiguriert die Pin, mit der das Relais gesteuert wird.<br><br><b>Wichtig:</b> Für die lokelen Pins, welche sich direkt auf ihrem Raspberry Pi befinden, entspricht die Nummer die hier ausgewählt werden muss nicht der GPIO-Nummer. Für das lokale Board, müssen statt den GPIO-Nummern sogenannte BCM-Nummern verwendet werden. BCM steht für 'Broadcom SOC channel', und bezeichnet die Nummer der Pin innerhalb des Chips, der vom Raspberry Pi verwendet wird. Diese Nummern haben sich eventuell zwischen den Board-Versionen geändert. Dieser Link kann helfen:",
+      control_pin_desc: "Ein Gleichstrommotor kann ein- und ausgeschaltet werden, indem er mit einer Stromquelle verbunden und von dieser getrennt wird. Dies geschieht in der Regel mit Hilfe eines Relais. Das Relais öffnet und schließt den elektronischen Stromkreis, mit dem der Motor verbunden ist. Das Feld 'Steuerungs-Pin' konfiguriert die Pin, mit der das Relais gesteuert wird.<br><br><b>Wichtig:</b> Für die lokalen Pins, welche sich direkt auf ihrem Raspberry Pi befinden, entspricht die Nummer, die hier ausgewählt werden muss, nicht der GPIO-Nummer. Für das lokale Board müssen statt den GPIO-Nummern sogenannte BCM-Nummern verwendet werden. BCM steht für 'Broadcom SOC channel', und bezeichnet die Nummer der Pin innerhalb des Chips, der vom Raspberry Pi verwendet wird. Diese Nummern haben sich eventuell zwischen den Board-Versionen geändert. Dieser Link kann helfen:",
       power_state_desc: 'Je nach Hardware-Aufbau läuft der Motor entweder wenn die Pin, der die Pumpe steuert, auf HIGH oder LOW gesetzt wird. Bitte wählen Sie den Zustand, in welchem Ihre Pumpe in Ihrer Konfiguration eingeschaltet wäre.',
       power_state_label: 'Pinzustand',
       power_state_options: {
@@ -1109,13 +1109,13 @@ export default {
         '    Der Aktivierungspin (Enable). Dieser Pin entscheidet, ob der Motor aktiviert sein sollte und somit seine aktuelle Position halten soll oder nicht.' +
         '  </li>' +
         '  <li>' +
-        '    Der Richtungspin (Dir). Er entscheidet über die Richtung, die der Motor nimmt. Die Richtung, in die der Motor läuft, wird von einem einzelnen Pin bestimmt, der die Richtung für alle Motoren steuert. Dieser Pin wird in der Pumpenübersicht definiert und ist kein Teil dieses Setups! Bitte konfigurieren Sie Ihre Maschine so, dass diese Pin mit der Richtungslogik aller Ihrer Motoren verbunden ist.' +
+        '    Der Richtungspin (Dir). Er entscheidet über die Richtung, die der Motor nimmt. Die Richtung, in die der Motor läuft, wird von einem einzelnen Pin bestimmt, der die Richtung für alle Motoren steuert. Dieser Pin wird in der Pumpenübersicht definiert und ist kein Teil dieses Setups! Bitte konfigurieren Sie Ihre Maschine so, dass dieser Pin mit der Richtungslogik aller Ihrer Motoren verbunden ist.' +
         '  </li>' +
         '  <li>' +
         '    Ihr Motortreiber bietet höchstwahrscheinlich auch weitere Pins (Schrittauflösung/Schlaf/...). Bitte konfigurieren Sie diese statisch in der Hardware!' +
         '  </li>' +
         '</ul>' +
-        "<b>Wichtig:</b> Für die lokelen Pins, welche sich direkt auf ihrem Raspberry Pi befinden, entspricht die Nummer die hier ausgewählt werden muss nicht der GPIO-Nummer. Für das lokale Board, müssen statt den GPIO-Nummern sogenannte BCM-Nummern verwendet werden. BCM steht für 'Broadcom SOC channel', und bezeichnet die Nummer der Pin innerhalb des Chips, der vom Raspberry Pi verwendet wird. Diese Nummern haben sich eventuell zwischen den Board-Versionen geändert. Dieser Link kann helfen:"
+        "<b>Wichtig:</b> Für die lokalen Pins, welche sich direkt auf ihrem Raspberry Pi befinden, entspricht die Nummer, die hier ausgewählt werden muss, nicht der GPIO-Nummer. Für das lokale Board müssen statt den GPIO-Nummern sogenannte BCM-Nummern verwendet werden. BCM steht für 'Broadcom SOC channel', und bezeichnet die Nummer des Pins innerhalb des Chips, der vom Raspberry Pi verwendet wird. Diese Nummern haben sich eventuell zwischen den Board-Versionen geändert. Dieser Link kann helfen:"
     },
     pump_setup_stepper_calibration: {
       acceleration_label: 'Beschleunigung',
@@ -1183,7 +1183,7 @@ export default {
           python_file_label: 'Python (max. 20 MB)'
         },
         nothing: {
-          desc: 'Diese Aktion tut nichts. Aber bricht andere andere laufende Aktionen ab, die keine Ausführungsgruppen mit ihr teilen.'
+          desc: 'Diese Aktion bewirkt nichts, aber bricht andere laufende Aktionen ab, die keine Ausführungsgruppen mit ihr teilen.'
         }
       }
     },
@@ -1200,7 +1200,7 @@ export default {
     },
     donation_disclaimer: {
       headline: 'Deine Unterstützung wird benötigt!',
-      headline_caption: 'Zum schließen nach unten scrollen',
+      headline_caption: 'Zum Schließen nach unten scrollen',
       donate_paypal_btn_label: 'Spenden via PayPal',
       donate_github_btn_label: 'Spenden via GitHub Sponsors',
       headline_2: 'Diese Software ist kostenlos, aber Spenden werden gerne gesehen!',
@@ -1223,7 +1223,7 @@ export default {
         '              </li>\n' +
         '              <li>\n' +
         '                Die Entwicklung dieser Software verursacht Kosten. Ich als Entwickler kaufe oft Hardware, nur um zu testen,\n' +
-        '                ob sie mit dem Gerät funktionieren und sinnvoll ist. Hierdurch mache ich mit der Entwicklung der Software sogar verlust, da ich die Hardware oft selbst garnicht verwende.\n' +
+        '                ob sie mit dem Gerät funktionieren und sinnvoll ist. Hierdurch mache ich mit der Entwicklung der Software sogar Verlust, da ich die Hardware oft selbst gar nicht verwende.\n' +
         '              </li>\n' +
         '            </ul>' +
         '            <p>\n' +
