@@ -87,8 +87,8 @@ jobs:
     - name: Login to DockerHub
       uses: docker/login-action@v1
       with:
-        username: alex9849
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
+        username: 470mr0f1
+        password: ${{ secrets.SECRET_DOCKER }}
     - name: Get the version
       id: get_version
       run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
