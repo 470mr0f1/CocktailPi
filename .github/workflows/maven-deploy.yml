@@ -100,8 +100,8 @@ jobs:
         path: backend/target/
     - name: Build images
       run: |
-        docker build -t alex9849/cocktailpi:${{ steps.get_version.outputs.VERSION }} -f script/docker/Dockerfile .
-        docker tag alex9849/cocktailpi:${{ steps.get_version.outputs.VERSION }} alex9849/cocktailpi:latest
+        docker build -t 470mr0f1/cocktailpi:${{ steps.get_version.outputs.VERSION }} -f script/docker/Dockerfile .
+        docker tag 470mr0f1/cocktailpi:${{ steps.get_version.outputs.VERSION }} 470mr0f1/cocktailpi:latest
     - name: Push images
-      run: docker push alex9849/cocktailpi --all-tags
+      run: docker push 470mr0f1/cocktailpi --all-tags
 
